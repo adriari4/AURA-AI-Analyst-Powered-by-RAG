@@ -1,4 +1,4 @@
-# Value Investing Chatbot (Invertir Desde Cero)
+# Value Investing Chatbot
 
 A multimodal RAG (Retrieval Augmented Generation) system designed to answer value investing questions strictly based on the "Invertir Desde Cero" YouTube channel content.
 
