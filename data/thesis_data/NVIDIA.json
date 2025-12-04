@@ -1,0 +1,256 @@
+{
+  "filename": "INVESTEMENT_THESIS_NVIDIA.pdf",
+  "summary": "**Summary:**\n\n1. **Problem/Context:**\n   Nvidia has established itself as a leading provider of hardware for artificial intelligence (AI), capturing over 75% of the market share in graphics processing units (GPUs). The company has a history of innovation and has been working in the AI field for over a decade, recognizing its growth potential. Nvidia's business model is asset-light, focusing on design and development while outsourcing manufacturing. The company is creating an ecosystem that combines hardware and specialized software, which could lead to competitive advantages through switching costs.\n\n2. **Method/Approach:**\n   Nvidia's approach involves offering a comprehensive ecosystem of hardware and software for AI applications, particularly in data centers, which account for 87% of its sales. The company provides a range of products, including GPUs, DPUs, NICs, and AI solutions, along with software platforms to enhance performance. Nvidia's strategy includes launching new products annually and maintaining a strong focus on innovation. The company also leverages its scale and intellectual property to maintain a competitive edge.\n\n3. **Results/Key Findings:**\n   Nvidia is experiencing significant growth, with sales expected to double by the fiscal year 2025, driven by the demand for AI-related products. The company's free cash flow (FCF) is projected to grow at 34% annually. Despite its cyclical nature, Nvidia's business benefits from high margins and a strong return on invested capital (ROIC). The company's competitive advantages include its intellectual property, scale, and pricing power. Nvidia's position as a leader in AI infrastructure is reinforced by its ability to offer a complete solution, reducing complexity and costs for its clients.",
+  "pages": [
+    {
+      "page_number": 1,
+      "is_readable": true,
+      "main_text": "Nvidia Corp. Empresa l\u00edder en IA Nvidia ha logrado convertirse en el proveedor de referencia para el hardware necesario para IA, con una cuota de mercado superior al 75% en tarjetas de procesado gr\u00e1fico (GPUs). La innovaci\u00f3n est\u00e1 en su \u201cADN\u201d Siempre se han caracterizado por desarrollar productos t\u00e9cnicamente muy avanzados, de vanguardia tecnol\u00f3gica. Su \u00e9xito en IA ha sido algo muy trabajado. Comenzaron a trabajar en este campo hace m\u00e1s de 10 a\u00f1os, ya que ve\u00edan un gran potencial de crecimiento. Est\u00e1n creando un \u201cecosistema\u201d que refuerza sus ventajas competitivas La empresa complementa su oferta de hardware con software especializado para el desarrollo de aplicaciones espec\u00edficas para IA. Si las empresas adoptan mayoritariamente este software, se crear\u00eda una ventaja competitiva en forma de costes de cambio. Valoraci\u00f3n Estamos ante un negocio de alto crecimiento, que pr\u00e1cticamente duplicar\u00e1 las ventas del a\u00f1o pasado en el a\u00f1o fiscal 2025. Este crecimiento justifica que usemos un m\u00faltiplo EV/FCF de 40 veces, de manera excepcional. Tambi\u00e9n como excepci\u00f3n, valoraremos esta compa\u00f1\u00eda a 3 a\u00f1os vista, dado que probablemente, el crecimiento se ralentizar\u00e1 m\u00e1s adelante, y es dif\u00edcil justificar un m\u00faltiplo de 40x a largo plazo. Este escenario nos arroja un precio objetivo de 164$ de cara al a\u00f1o fiscal 2027, que supondr\u00eda un retorno anual del 10%.",
+      "graphics": [
+        {
+          "type": "Table",
+          "caption": "Investment and Stock Information",
+          "content": "RETORNO DE LA INVERSION: ALTO, RIESGO DE LA INVERSION: MEDIO, VOLATILIDAD DE LA ACCION: MEDIO, TIPO DE INVERSION: GROWTH, PRICE: 121 $, VALORACI\u00d3N A 3 A\u00d1OS: 164 $, RETORNO ESPERADO ANUAL: 10 %, RETORNO A 3 A\u00d1OS: 34 %, MARKET CAP: $2.860 billion"
+        },
+        {
+          "type": "Chart",
+          "caption": "Nvidia Corporation Stock Price Chart",
+          "content": "Ticker: NVDA, Mercado: NASDAQ"
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "is_readable": true,
+      "main_text": "Introducci\u00f3n\nNvidia fue fundada en 1993 por su actual CEO, Jensen Huang, junto con otros dos ingenieros que trabajaban en Sun Microsystems e IBM, respectivamente. Huang fund\u00f3 Nvidia cuando ten\u00eda tan solo \u00a130 a\u00f1os! Los cofundadores de Nvidia compart\u00edan la idea de que habr\u00eda una revoluci\u00f3n en el procesado gr\u00e1fico. Las tarjetas gr\u00e1ficas que exist\u00edan en aquella \u00e9poca eran muy b\u00e1sicas. Estaban convencidos de que llegar\u00eda una nueva \u201coleada\u201d de tarjetas gr\u00e1ficas mucho m\u00e1s avanzadas, que abrir\u00edan un enorme mercado a nivel mundial. Los primeros a\u00f1os de vida de la compa\u00f1\u00eda fueron dif\u00edciles, ya que los co-fundadores trabajaron sin \u00e9xito durante varios a\u00f1os. No lograron desarrollar ning\u00fan producto que se convirtiese en un \u00e9xito de ventas. De hecho, Nvidia estuvo al borde de la bancarrota en 1996, cuando estaban trabajando en un chip de dise\u00f1o gr\u00e1fico para la consola Sega Dreamcast. En ese momento, Huang logr\u00f3 convencer a la directiva de Sega para invertir $5 millones en Nvidia, a cambio de reestructurar la compa\u00f1\u00eda y \u201capostar\u201d ese capital en el desarrollo de un \u00fanico proyecto, la tarjeta gr\u00e1fica Riva 128, que se convirti\u00f3 en un \u00e9xito de ventas en 1997 y salv\u00f3 a la compa\u00f1\u00eda de la quiebra. Esta experiencia marc\u00f3 profundamente a Huang, y es habitual que comience sus conferencias a empleados con la frase \u201cLa compa\u00f1\u00eda est\u00e1 a 30 d\u00edas de la quiebra\u201d, en referencia a las dificultades financieras que hemos mencionado. Nvidia sali\u00f3 a bolsa en 1999, el mismo a\u00f1o en el que lanzaron la revolucionaria tarjeta gr\u00e1fica GeForce 256, que fue considerada como la primera GPU (\u201cGraphic Processing Unit\u201d). Desde entonces, su crecimiento ha sido principalmente org\u00e1nico, aunque tambi\u00e9n han realizado algunas adquisiciones, principalmente para hacerse con la valiosa propiedad intelectual de sus competidores.",
+      "graphics": [
+        {
+          "type": "Figure",
+          "caption": "Captura de pantalla del videojuego PowerStreak (1992)",
+          "content": "Graphic showing a scene from the video game PowerStreak (1992)."
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "is_readable": true,
+      "main_text": "Modelo de negocio\nNvidia es una empresa de semiconductores que dise\u00f1a tarjetas de procesado gr\u00e1fico (GPUs), interfaces de programaci\u00f3n (APIs o \u201cApplication Programming Interface\u201d) y chips integrados para dispositivos m\u00f3viles y automoci\u00f3n (SOCs - \u201cSystem On a Chip\u201d). Esta empresa se caracteriza por tener un modelo de negocio ligero de activos. Desde su fundaci\u00f3n, Nvidia subcontrata los costosos procesos de fabricaci\u00f3n a otros proveedores. El modelo de negocio de empresas como Nvidia se denominan \u201cfabless\u201d (sin f\u00e1brica). Con esto, Nvidia consigue destinar todos sus recursos en el dise\u00f1o, certificaciones de calidad, marketing y soporte t\u00e9cnico a sus clientes. Nvidia reporta sus estados financieros a partir de dos grandes segmentos, Compute & Networking y Graphics, pero es m\u00e1s adecuado analizar sus ventas en base a sus mercados objetivo, que son:\n1. Data Center (87% ventas): los dispositivos de Nvidia est\u00e1n dise\u00f1ados espec\u00edficamente para ejecutar procesos de IA, anal\u00edtica de datos, gr\u00e1ficos o computaci\u00f3n cient\u00edfica. Estos dispositivos son mucho m\u00e1s potentes y eficientes que otras alternativas, como el uso de CPUs (\u201cCentral Processing Units\u201d, los procesadores \u201ctradicionales\u201d de PCs y servidores). Este segmento incluye distintos tipos de dispositivos como:\na. GPUs (\u201cGraphic Processing Unit\u201d): tarjetas de procesamiento gr\u00e1fico, que engloba una amplia gama de productos, como las GeForce RTX, Quadro, Titan, Tesla, DGX...\nb. DPUs (\u201cData Processing Unit\u201d): tarjetas de procesamiento de datos, son como una combinaci\u00f3n de GPU + CPU, dise\u00f1adas espec\u00edficamente para el tratamiento en masa de grandes cantidades de datos.\nc. NICs (\u201cNetwork Interface Card\u201d): tarjetas de red ultra-r\u00e1pidas, dise\u00f1adas para redes Ethernet y para interconectar distintos servidores de GPUs.\nd. AI (\u201cArtificial Intelligence\u201d): se trata de la gama de productos m\u00e1s vendidos y rentables de Nvidia. Incluye productos como las tarjetas H100, con un precio de venta unitario de $25,000. La demanda de estas tarjetas es tan alta, que algunas empresas han logrado financiaci\u00f3n respaldada por las tarjetas H100 que tienen en propiedad. Esto ha sido algo verdaderamente inusual, ya que las empresas financieras suelen preferir usar como colaterales activos \u201ctradicionales\u201d, como bienes inmuebles, flotas de veh\u00edculos, etc.",
+      "graphics": []
+    },
+    {
+      "page_number": 4,
+      "is_readable": true,
+      "main_text": "e. HPC (\u201cHigh Performance Computing\u201d): estos productos est\u00e1n dise\u00f1ados espec\u00edficamente para acelerar los procesos usados en determinadas industrias, como la previsi\u00f3n meteorol\u00f3gica, exploraci\u00f3n energ\u00e9tica, qu\u00edmica computacional, din\u00e1mica molecular... f. Otros: Nvidia est\u00e1 creando un ecosistema alrededor de sus productos, ya que tambi\u00e9n proporciona software como NVIDIA AI Enterprise, DGX Cloud y distintas plataformas de desarrollo, creadas para aprovechar al m\u00e1ximo el rendimiento de los productos vendidos por Nvidia 2. Gaming (10% ventas): tarjetas dise\u00f1adas para el procesamiento gr\u00e1fico de videojuegos, usadas tanto en PCs de escritorio, como port\u00e1tiles y consolas. Este segmento corresponde principalmente a dispositivos GeForce RTX, GTX, adem\u00e1s de GeForce NOW, la oferta de videojuegos en la nube de Nvidia. 3. Professional Visualization (2% ventas): se trata de GPUs dise\u00f1adas espec\u00edficamente para ciertas \u00e1reas de dise\u00f1o, fabricaci\u00f3n, creaci\u00f3n de contenido digital... 4. Automotive (1% ventas): son dispositivos dise\u00f1ados para la conducci\u00f3n aut\u00f3noma y computaci\u00f3n del veh\u00edculo en general. Nvidia comercializa estos productos a trav\u00e9s de su marca \u201cDRIVE Hyperion\u201d.",
+      "graphics": [
+        {
+          "type": "Chart",
+          "caption": "Nvidia: Ventas por segmento (FQ1 2025)",
+          "content": "Professional Visualization 2%, Automotive 1%, Gaming 10%, Data Center 87%"
+        }
+      ]
+    },
+    {
+      "page_number": 5,
+      "is_readable": true,
+      "main_text": "Lo importante en Nvidia es que nos quedemos con la idea de que estamos ante una compa\u00f1\u00eda de vanguardia tecnol\u00f3gica, que innova constantemente en distintas \u00e1reas relacionadas con la computaci\u00f3n. No es necesario memorizar todas estas siglas. Prueba de esta innovaci\u00f3n, es que el CEO de Nvidia se marca como objetivo lanzar un nuevo producto cada a\u00f1o, no solo en GPUs, sino en todos los dispositivos que ofrecen para Data Centers. Estos son algunos ejemplos: En esta tesis nos centraremos en el \u00e1rea m\u00e1s importante para Nvidia, el segmento Data Center, ya que aporta el 87% de las ventas. Nvidia proporciona toda la infraestructura necesaria para que las empresas puedan explotar al m\u00e1ximo todas las posibilidades que ofrece la IA. \u201cLa gente dice que hacemos GPUs. En realidad, estamos creando una plataforma de IA\u201d - Jensen Huang, CEO y fundador de Nvidia Para entender la importancia de Nvidia, debes entender qu\u00e9 es realmente un Data Center. Un centro de datos no es m\u00e1s que una gran sala repleta de grandes armarios (\u201cracks\u201d) que contienen servidores. La parte m\u00e1s compleja es precisamente lo que hay dentro de esos servidores, y c\u00f3mo est\u00e1n interconectados. Esto permite dividir la carga de trabajo entre varios servidores, para ejecutar las tareas de forma m\u00e1s r\u00e1pida.",
+      "graphics": [
+        {
+          "type": "Table",
+          "caption": "Ejemplos de lanzamientos de dispositivos de Nvidia para Data Centers.",
+          "content": "Lanzamiento | Dispositivo | Tipo\n2024 Q2 | Blackwell B100/H200 | GPU\n2025 | Blackwell Ultra/B200 | GPU\n2025 | Rubin | GPU\n2025 | Spectrum Ultra X800 | Red\n2026 | Vera | CPU\n2026 | Spectrum X1600 | Red"
+        },
+        {
+          "type": "Diagram",
+          "caption": "Descripci\u00f3n de las \u00e1reas de enfoque de Nvidia en infraestructura, software de plataforma de IA, y modelos y servicios de IA.",
+          "content": "Accelerated Infrastructure: An AI-driven A.I training service that gives enterprises immediate access to their own supercomputer in leading clouds. NVIDIA DGX Cloud offers multi-node training at scale accessible from a browser. AI Platform Software: The software layer of the NVIDIA AI platform. NVIDIA AI Enterprise powers the end-to-end workflow. It accelerates the data science pipeline and streamlines the development and deployment of production AI. AI Models and Services: NVIDIA AI Foundation models and services make building powerful, production-ready, and trusted, industry-based applications for your business easier."
+        }
+      ]
+    },
+    {
+      "page_number": 6,
+      "is_readable": true,
+      "main_text": "Cada uno de estos servidores de IA contiene el hardware necesario para ejecutar las complejas tareas de computaci\u00f3n. En la siguiente imagen puedes ver c\u00f3mo se instalan una serie de GPUs en un servidor de IA. Adem\u00e1s, cada una de estas tarjetas van unidas entre s\u00ed - interconectadas -.",
+      "graphics": [
+        {
+          "type": "Figure",
+          "caption": "A data center corridor with multiple servers.",
+          "content": "Graphic unreadable"
+        },
+        {
+          "type": "Figure",
+          "caption": "A server with multiple GPUs installed.",
+          "content": "Graphic unreadable"
+        }
+      ]
+    },
+    {
+      "page_number": 7,
+      "is_readable": true,
+      "main_text": "Tambi\u00e9n es fundamental la parte de conectividad de red, donde Nvidia ofrece su soluci\u00f3n Spectrum X, que ha sido una revoluci\u00f3n. Este hardware permite alcanzar velocidades de hasta 800 Gb por segundo. Como referencia, una red dom\u00e9stica, o incluso empresarial, suele tener una velocidad de, como mucho, de 1 Gb/s. Adem\u00e1s, combinan esta oferta de hardware con una plataforma de software de IA propia, pero representa una peque\u00f1a parte de las ventas, por lo que esta parte no es realmente significativa. Este software tiene un coste de licencia perpetua de 3.600$, pero adem\u00e1s, los clientes tambi\u00e9n suelen contratar el soporte t\u00e9cnico, que ser\u00edan 900$ anuales por licencia. Se estima que Nvidia ha vendido aproximadamente un mill\u00f3n de GPUs modelo A100 y H100. Suponiendo que todos los clientes hayan contratado este soporte t\u00e9cnico, representar\u00eda, como mucho, un ingreso anual recurrente de 900 millones, un 0,8% sobre unas ventas estimadas para 2025 de m\u00e1s de $120 billion, por lo que este ingreso recurrente no es relevante. El objetivo de Nvidia no es convertirse en una empresa de software, sino crear un ecosistema alrededor de sus productos. La idea de ofrecer este software es ayudar a que sus clientes desarrollen su IA m\u00e1s r\u00e1pido. Adem\u00e1s, tambi\u00e9n permite optimizar el rendimiento de las GPUs, ya que pueden aumentar el rendimiento de estas GPUs con tan solo una actualizaci\u00f3n de software, como cuando se nos actualiza Windows. Nvidia podr\u00eda estar creando una ventaja competitiva en forma de costes de cambio con su ecosistema de IA. Nvidia afirma que este ecosistema est\u00e1 compuesto de 5 millones de desarrolladores de software, que trabajan para 40.000 compa\u00f1\u00edas y 18.000 startups. Estos desarrolladores han creado m\u00e1s 3.300 aplicaciones que usan GPUs de Nvidia.",
+      "graphics": [
+        {
+          "type": "Figure",
+          "caption": "Image of Nvidia hardware components.",
+          "content": "Graphic unreadable"
+        },
+        {
+          "type": "Figure",
+          "caption": "CRN article headline about Nvidia's new software.",
+          "content": "Nvidia Says New Software Will Double LLM Inference Speed On H100 GPU BY DYLAN MARTIN SEPTEMBER 08, 2023, 02:47 PM EDT"
+        }
+      ]
+    },
+    {
+      "page_number": 8,
+      "is_readable": true,
+      "main_text": "Con esta combinaci\u00f3n de hardware y software, Nvidia ha logrado crear una oferta inigualable en IA. Los clientes no necesitan recurrir a ning\u00fan otro proveedor para montar su centro de datos, mientras que si compran p.ej. las GPUs de AMD, tendr\u00e1n que combinar hardware y software de distintos proveedores, lo que aumenta la complejidad y el coste del proyecto. La oferta de \u201cAI Models and Services\u201d se refiere realmente a la IA Generativa (\u201cGenAI\u201d), donde Nvidia ofrece una combinaci\u00f3n de hardware y software para que cualquier empresa pueda crear su propia plataforma de IA. Nvidia tambi\u00e9n ofrece la posibilidad de contratar esta oferta de GenAI en la nube, a trav\u00e9s de sus partners: Nvidia es la principal beneficiada del crecimiento en IA en general, aunque la mayor parte de este crecimiento viene de la GenAI, donde hay empresas con enormes recursos invirtiendo miles de millones cada a\u00f1o en mejorar su oferta. Las siguientes empresas compran hardware de Nvidia, con la excepci\u00f3n de las empresas chinas, por limitaciones regulatorias: Como referencia, tenemos que OpenAI necesit\u00f3 usar m\u00e1s de 25.000 GPUs Blackwell H100 para desarrollar la \u00faltima versi\u00f3n de ChatGPT-4o. El precio de venta oficial de estos sofisticados dispositivos es de 25.000$, por lo que estas 25.000 GPUs costaron aproximadamente ~$625 millones, m\u00e1s impuestos. Este hardware se quedar\u00e1 desfasado dentro de pocas semanas con el lanzamiento de",
+      "graphics": [
+        {
+          "type": "Diagram",
+          "caption": "Build Generative AI Faster With Your Partner of Choice",
+          "content": "Google Cloud, Microsoft Azure, Oracle Cloud Infrastructure"
+        },
+        {
+          "type": "Chart",
+          "caption": "Generative AI: Market share",
+          "content": "OpenAI 30%, Microsoft 20%, AWS 15%, Google 7%, Other 16%, Rest"
+        }
+      ]
+    },
+    {
+      "page_number": 9,
+      "is_readable": true,
+      "main_text": "Las nuevas tarjetas Blackwell B100, B200 y H200 de Nvidia, que supondr\u00e1n una mejora notable sobre las actuales H100. Las principales empresas de GenAI tendr\u00e1n que realizar, de nuevo, grandes inversiones en estas nuevas tarjetas. Toda esta demanda supone un enorme viento de cola para Nvidia, y por el momento no hay signos de que se vaya a frenar, al menos a corto plazo. Nvidia tiene claro su \u201croadmap\u201d para los pr\u00f3ximos a\u00f1os. Si la demanda acompa\u00f1a, el crecimiento de esta compa\u00f1\u00eda ser\u00e1 espectacular.\n\nCrecimiento y m\u00e1rgenes\n\nSi se cumplen las estimaciones de ventas para 2025 que plantearemos en la plantilla de valoraci\u00f3n, Nvidia habr\u00e1 aumentado sus ventas a un 21% anual, mientras que su FCF habr\u00e1 crecido al 34%, algo verdaderamente impresionante. Hemos tenido en cuenta las ventas estimadas de 2025 de manera excepcional para este c\u00e1lculo, dado que podr\u00eda duplicar las ventas que gener\u00f3 en el a\u00f1o fiscal 2024.\n\nSi analizamos la evoluci\u00f3n hist\u00f3rica de las ventas, salta a la vista que estamos ante un negocio c\u00edclico. Las ventas de Nvidia han decrecido en 5 de los \u00faltimos 23 a\u00f1os. Esto se debe a que la demanda de sus productos fluct\u00faa en funci\u00f3n de las necesidades y capacidad econ\u00f3mica de sus clientes.\n\nEsta ciclicidad se ve reflejada en la evoluci\u00f3n del precio por acci\u00f3n. Las flechas rojas del gr\u00e1fico se\u00f1alan los a\u00f1os donde las ventas de Nvidia cayeron. Estos \u201cdesplomes\u201d de crecimiento coinciden con ca\u00eddas del -80% en el precio por acci\u00f3n desde m\u00e1ximos en 2004 y 2009, -60% en 2014, -55% en 2019 y -65% en 2022. Debes tener claro que, si el mercado cree que las ventas de Nvidia se frenar\u00e1n a corto plazo, castigar\u00e1n a la empresa en bolsa:",
+      "graphics": [
+        {
+          "type": "Chart",
+          "caption": "Nvidia - Evoluci\u00f3n hist\u00f3rica ventas",
+          "content": "Ventas, Ventas YoY %. Years: 2000-2025. Sales values and percentage changes are shown, with notable declines marked in red."
+        }
+      ]
+    },
+    {
+      "page_number": 10,
+      "is_readable": true,
+      "main_text": "Esta ciclicidad provoca que el margen FCF no sea estable, ya que est\u00e1 afectado tanto por la evoluci\u00f3n de las ventas y por las variaciones de Working Capital. En el a\u00f1o fiscal 2024, la empresa gener\u00f3 un margen FCF del 39%, y es probable que logren aumentarlo durante los pr\u00f3ximos a\u00f1os, gracias al enorme margen que aportan las ventas de dispositivos relacionados con la IA. Esto depende principalmente de que no se frene la demanda por este tipo de dispositivos, ya que han supuesto el 87% de las ventas durante el \u00faltimo trimestre.\n\nEl ROIC es espectacular. Ha sido del 43% de media durante los \u00faltimos 10 a\u00f1os, y un 77% en el a\u00f1o fiscal 2024. Al tratarse de un negocio ligero de activos, la empresa no necesita invertir en costosas f\u00e1bricas de chips, lo que reduce las necesidades de invertir capital para crecer.\n\nVentajas competitivas\n\nIntangibles\n\nLa propiedad intelectual de Nvidia es incalculable. Han logrado convertirse en la empresa de referencia en infraestructura de IA gracias a su esp\u00edritu innovador y que ahora mismo se encuentra a grandes distancias temporales en t\u00e9rminos tecnol\u00f3gicos de sus competidores.",
+      "graphics": [
+        {
+          "type": "Chart",
+          "caption": "Gr\u00e1fico de evoluci\u00f3n de m\u00e1rgenes y ventas de dispositivos relacionados con IA.",
+          "content": "2001, 2004, 2007, 2010, 2013, 2016, 2019, 2022; Margen FCF, ROIC, Ventas de dispositivos IA"
+        }
+      ]
+    },
+    {
+      "page_number": 11,
+      "is_readable": true,
+      "main_text": "Escala\nLa elevada demanda de sus productos le permite tener cierto poder de negociaci\u00f3n con sus proveedores. Por ejemplo, TSM preferir\u00eda firmar un acuerdo de largo plazo para la fabricaci\u00f3n de tarjetas para Nvidia, antes que depender de las variaciones de la demanda de un fabricante de automoci\u00f3n, que tendr\u00e1 muchas m\u00e1s variaciones en sus pedidos, por poner un ejemplo.\nAdem\u00e1s, la posici\u00f3n competitiva de la compa\u00f1\u00eda le permite tener poder de fijaci\u00f3n de precios (\u201cpricing power\u201d), la ventaja competitiva preferida por Warren Buffett. Por ejemplo, las nuevas tarjetas B100 tendr\u00e1n un coste unitario de entre 30.000 y 35.000 d\u00f3lares, un 25-40% m\u00e1s caras que las tarjetas H100, lanzadas hace tan solo un a\u00f1o.\nSector y comparables\nNvidia ha logrado posicionarse como principal proveedor en computaci\u00f3n para Data Centers. Su \u00e9xito en las GPUs de IA le han permitido aumentar su cuota de mercado del 15% al 75% actual en menos de cinco a\u00f1os, algo verdaderamente impresionante:\nDebes tener en cuenta que esta cuota de mercado se refiere \u00fanicamente a las GPUs de Data Centers. Existen productos alternativos a estas GPUs, que son los ASICs (\u201cApplication-Specific Integrated Circuit\u201d). Este acr\u00f3nimo se refiere a tarjetas dise\u00f1adas espec\u00edficamente para determinados usos, como la IA, Machine Learning, Big Data...",
+      "graphics": [
+        {
+          "type": "Chart",
+          "caption": "Nvidia's share of the Data Center Compute market has grown from ~15% five years ago to ~75% today",
+          "content": "Data Center Compute Wallet Share\n2018-2023\nNvidia, Intel, AMD\nSource: Company data, Goldman Sachs Global Investment Research"
+        }
+      ]
+    },
+    {
+      "page_number": 12,
+      "is_readable": true,
+      "main_text": "Distintos analistas creen que el crecimiento de ASICs ser\u00e1 superior al de GPUs durante los pr\u00f3ximos a\u00f1os. Esto tiene todo el sentido del mundo, ya que los ASICs pueden ser m\u00e1s eficientes que las GPUs de Nvidia, adem\u00e1s de tener un coste unitario menor. A continuaci\u00f3n, tenemos una lista con los principales ASICs dise\u00f1ados por los principales proveedores que compiten con Nvidia, e incluso clientes de Nvidia, como Google, Amazon y Meta, tambi\u00e9n han dise\u00f1ado sus propias tarjetas. Los analistas de Morgan Stanley creen que el n\u00famero de ASICs que se vender\u00e1n durante 2024 duplicar\u00e1 a las GPUs vendidas, pero en 2027, el n\u00famero de ASICs vendidas pasar\u00eda a cuadriplicar el de GPUs.",
+      "graphics": [
+        {
+          "type": "Chart",
+          "caption": "Custom AI chips to outgrow general-purpose",
+          "content": "Cloud semi breakdown: General AI vs. Custom AI. US$ mn from 2021 to 2027e. General-purpose AI (GPU, FPGA, merchant AI) vs. Custom AI. Source: Morgan Stanley Research estimates."
+        },
+        {
+          "type": "Table",
+          "caption": "AI chips classified by General vs. Custom (ASIC)",
+          "content": "Merchant (3rd party): Intel Nervana NNP-I (Inference), Intel Habana Gaudi (Training), Graphcore IPU, Cerebras WSE-2, 4-Matrix, Cambricon Siyuan 370, Enflame D10.2, Neuchip RecAccel\u2122 N3000, Tenstorrent (RISC-V), Qualcomm Cloud AI 100, Sambanova RDU. Captive (in-house): Google TPU 4, Amazon Inferentia Gen 2, Microsoft Athena, Alibaba T-Head Hanguang 800, Baidu Kunlun 2, Meta MTIA. General Purpose chips: NVIDIA H100 GPU, AMD Instinct MI300, AMD Xilinx FPGA Vitis AI, Metax MFX, Moore Threads MTT S3000, Biren BR100. Source: Morgan Stanley Research."
+        }
+      ]
+    },
+    {
+      "page_number": 13,
+      "is_readable": true,
+      "main_text": "Estos mismos analistas estiman que Nvidia mantendr\u00eda una cuota de mercado en torno al 70% en el n\u00famero de GPUs vendidas en 2027, con un crecimiento anual del 15% en el n\u00famero de unidades vendidas. En los ASICs, Alphabet y Amazon controlar\u00e1n tambi\u00e9n el 70% de cuota de mercado, con un crecimiento anual del 40%. Debes tener en cuenta que estas dos empresas usar\u00e1n estos dispositivos para hacer crecer su oferta de IA en sus nubes (Google Cloud y AWS). Seg\u00fan Bloomberg, la industria que proporciona infraestructura para IA crecer\u00e1 al 30% anual durante los pr\u00f3ximos a\u00f1os, hasta alcanzar un tama\u00f1o de m\u00e1s de $473 billion en 2032. Esto incluye tanto GPUs como ASICs, adem\u00e1s de otro tipo de hardware para IA, como ya hemos mencionado en el apartado Modelo de negocio (DPUs, NICs, HPCs...).",
+      "graphics": [
+        {
+          "type": "Chart",
+          "caption": "Strong growth in AI enabling GPUs and ASICs",
+          "content": "Total GPU volume (k units) and Total ASIC volume (k units) from FY23e to FY27e."
+        },
+        {
+          "type": "Table",
+          "caption": "Base case estimates for NVIDIA and ASIC calculations",
+          "content": "NVIDIA calculation: GP GPU volume (k units), NVIDIA market share (%), Total GPU volume (k units). ASIC calculation: Total TPU volume (k units), Total AWS Training/Inference volume (k units), Google + Amazon ASIC market share (%), Total ASIC volume (k units)."
+        }
+      ]
+    },
+    {
+      "page_number": 14,
+      "is_readable": true,
+      "main_text": "Curiosamente, Nvidia controla el 80% del mercado de GPUs Gaming, para ordenadores de escritorio y port\u00e1tiles, una cuota muy similar a la que controlan actualmente en GPUs de IA. Nvidia compite principalmente con AMD en Gaming, que cuenta con un 17% de cuota de mercado, mientras que el resto de los rivales generan menos del 3% de las ventas de esta industria. Nvidia podr\u00eda estar replicando en su oferta de IA el \u00e9xito que ha tenido en Gaming, donde lleva siendo #1 del mercado durante m\u00e1s de 25 a\u00f1os desde el lanzamiento de su primera GPU, all\u00e1 por 1999.\n\nA pesar de ser pr\u00e1cticamente un duopolio, la cuota de mercado ha variado bastante hist\u00f3ricamente. Esto se debe a la acogida que tengan los lanzamientos de nuevas tarjetas gr\u00e1ficas. Como referencia, AMD lleg\u00f3 a controlar el 38% de cuota de mercado a comienzos de 2014, pero cay\u00f3 al 18% un a\u00f1o despu\u00e9s, gracias al buen trabajo de Nvidia con sus nuevas tarjetas gr\u00e1ficas en aquella \u00e9poca.",
+      "graphics": [
+        {
+          "type": "Table",
+          "caption": "Bloomberg Intelligence Interactive Calculator: Generative AI Market Opportunity",
+          "content": "Generative AI Revenue Projections ($ million, unless otherwise specified)\n2022: Hardware $37,973, Devices (Inference) $4,128, Infrastructure (Training) $33,865, Software $1,943, Total $39,843\n2022E: Hardware $223,615, Devices (Inference) $82,965, Infrastructure (Training) $140,650, Software $8,826, Total $399,345\n2022-32E CAGR: Hardware 38%, Devices (Inference) 45%, Infrastructure (Training) 30%, Software 69%, Total 53%"
+        }
+      ]
+    },
+    {
+      "page_number": 15,
+      "is_readable": true,
+      "main_text": "Distintos analistas estiman que la industria de GPUs gaming crecer\u00e1 al 25-35% anual durante los pr\u00f3ximos a\u00f1os, hasta alcanzar un tama\u00f1o de m\u00e1s de $770 billion en 2032, pero debes tener en cuenta que este mercado es secundario para Nvidia, ya que aporta tan solo el 10% de las ventas. Los dos mercados restantes donde compite Nvidia, Professional Visualization y Automotive, no son relevantes para la tesis, ya que aportan tan solo aportan el 3% de las ventas.",
+      "graphics": [
+        {
+          "type": "Chart",
+          "caption": "Discrete Desktop GPU Market Share (%)",
+          "content": "Data by Jon Peddie Research. Fuente: Tom's Hardware."
+        },
+        {
+          "type": "Chart",
+          "caption": "Graphic Processing Unit (GPU) Market Size, 2022 to 2032 (USD Billion)",
+          "content": "2022: $42.2, 2023: $56.25, 2024: $76.04, 2025: $100.17, 2026: $130.03, 2027: $170.83, 2028: $230.41, 2029: $320.58, 2030: $429.57, 2031: $576.06, 2032: $770.87. Source: www.precedenceresearch.com."
+        }
+      ]
+    },
+    {
+      "page_number": 16,
+      "is_readable": true,
+      "main_text": "Los rivales de Nvidia var\u00edan seg\u00fan cada segmento. Concretamente, la compa\u00f1\u00eda menciona los siguientes competidores en su informe anual: \n\n- IA: Alibaba, Alphabet, Amazon, Baidu, Huawei y Microsoft. \n- GPUs: AMD, Huawei e Intel. \n- NICs y DPUs: AMD, Arista Networks, Broadcom, Cisco, HP, Huawei, Intel, Lumentum Holdings, Marvell Technology y proveedores grandes nubes como Amazon, Microsoft, Alphabet o Alibaba. \n- SOCs (Automotive): Ambarella, AMD, Broadcom, Intel, Qualcomm, Renesas Electronics, Samsung y Tesla. \n\nEquipo Directivo \n\nLa figura clave de la empresa es su CEO y fundador, Jensen Huang. Naci\u00f3 en Taiwan, pero sus padres decidieron que se fuese a vivir con su t\u00edo a Estados Unidos, cuando ten\u00eda tan solo nueve a\u00f1os. Compagin\u00f3 sus estudios con un trabajo como camarero, hasta que se gradu\u00f3 como ingeniero el\u00e9ctrico en 1984, adem\u00e1s de obtener un m\u00e1ster en la misma materia en 1992. \n\nEstos estudios le sirvieron para que en 1984 le contratase como dise\u00f1ador de microprocesadores AMD. En 1985, fue contratado como director en LSI Logic, otra compa\u00f1\u00eda de semiconductores, hasta que en 1993, abandon\u00f3 este puesto de responsabilidad para fundar Nvidia. \n\nEl equipo directivo de Nvidia es reducido, con tan solo cinco miembros, algo excepcionalmente raro para la tercera empresa con mayor capitalizaci\u00f3n burs\u00e1til del mundo. Estos cinco ejecutivos tienen amplia experiencia en la industria y cuentan con participaciones muy importantes en el negocio respecto a su salario anual (\u201cskin in the game\u201d), algo muy poco habitual en empresas grandes: \n\nLos incentivos del equipo directivo est\u00e1n ligados a lograr un determinado nivel de ventas y de beneficio operativo ajustado. Adem\u00e1s, tambi\u00e9n tienen en cuenta retorno total por acci\u00f3n relativo al S&P 500 y ciertos objetivos individuales.",
+      "graphics": [
+        {
+          "type": "Table",
+          "caption": "Tabla de ejecutivos de Nvidia con sus cargos, antig\u00fcedad, acciones, valor de mercado, salario total anual y ratio 'skin in the game'.",
+          "content": "Ejecutivo | Cargo | Antig\u00fcedad (a\u00f1os) | # acciones (millones) | Valor de mercado (millones) | Salario total anual (millones) | Ratio 'skin in the game'\nJensen Huang | CEO | 31 | 93,5 | 108.792 | 34,2 | 3.184\nColette Kress | CFO | 11 | 0,5 | 600 | 13,3 | 45\nAjay Puri | EVP | 19 | 0,4 | 477 | 13,6 | 35\nDebora Shoquist | EVP | 17 | 0,2 | 235 | 11,1 | 21\nTimothy Teter | EVP | 7 | 0,2 | 269 | 11,1 | 24"
+        }
+      ]
+    },
+    {
+      "page_number": 17,
+      "is_readable": true,
+      "main_text": "Riesgos\n\nDemanda Futura: Actualmente, la demanda de GPUs es alta, pero eventualmente se estabilizar\u00eda cuando todas las f\u00e1bricas est\u00e9n completamente instaladas. En ese momento, la tecnolog\u00eda y la capacidad de IVDA para innovar y adaptarse ser\u00e1n cruciales para mantener su posici\u00f3n en el mercado.\n\nProductos sustitutivos: como hemos visto en el apartado Sector, los chips desarrollados a medida (ASICs) pueden ser incluso m\u00e1s eficientes que las GPUs de Nvidia. Esto podr\u00eda disminuir la demanda de los productos de la compa\u00f1\u00eda. Los competidores tambi\u00e9n podr\u00edan lanzar productos que mejoren la oferta de Nvidia.\n\nCiclicidad: el mercado siempre trata de adelantarse a lo que pasar\u00e1 en el futuro, por lo que en cuanto haya signos de que la demanda se frena, castigar\u00e1n a la empresa en bolsa.\n\nRetenci\u00f3n de talento: curiosamente, muchos empleados de Nvidia se han convertido en millonarios gracias a los pagos en acciones, dado que las acciones se han multiplicado x10 en menos de dos a\u00f1os, por lo que podr\u00edan abandonar su trabajo, sin necesidad de volver a trabajar en su vida. La directiva es consciente de este problema, y lo han tratado en una de las \u00faltimas reuniones del consejo de administraci\u00f3n.\n\nConcentraci\u00f3n geogr\u00e1fica: el 46% de las ventas se generan dentro de los Estados Unidos. Una recesi\u00f3n econ\u00f3mica en este pa\u00eds podr\u00eda disminuir las ventas.\n\nConcentraci\u00f3n de clientes: existe un cliente que representa m\u00e1s del 19% de las ventas anuales. La compa\u00f1\u00eda no desglosa cual es, pero probablemente ser\u00e1 una de las tres grandes nubes: AWS de Amazon, Azure de Microsoft o Google Cloud de Alphabet.\n\nConcentraci\u00f3n de proveedores: para la producci\u00f3n de sus chips, dependen principalmente de Taiwan Semiconductor, aunque tambi\u00e9n, en menor medida, de Samsung. Para las memorias, usan como proveedores a Micron, SK Hynix y Samsung. Cualquier interrupci\u00f3n en alguno de estos proveedores, podr\u00eda provocar una interrupci\u00f3n en la cadena de suministro, es decir, Nvidia ser\u00eda incapaz de satisfacer la demanda.",
+      "graphics": [
+        {
+          "type": "Figure",
+          "caption": "A screenshot from Business Insider about Nvidia's CEO addressing employee concerns.",
+          "content": "In an internal meeting, Nvidia's CEO addressed a question about employees in 'semi-retirement' mode as unusual tension grows. Business Insider."
+        }
+      ]
+    },
+    {
+      "page_number": 18,
+      "is_readable": true,
+      "main_text": "Problemas de dise\u00f1o o fabricaci\u00f3n: Entre 2008 y 2010, la compa\u00f1\u00eda tuvo que asumir un coste extraordinario de $500 millones, relacionado con las garant\u00edas por algunos defectos de fabricaci\u00f3n en sus tarjetas gr\u00e1ficas, especialmente en port\u00e1tiles. Este problema, unido a una ca\u00edda en la demanda de sus productos en 2008, provoc\u00f3 que el beneficio operativo fuese negativo por 1\u00aa vez en las \u00faltimas dos d\u00e9cadas.\n\nValoraci\u00f3n\n\nEstamos ante un negocio de alto crecimiento, que pr\u00e1cticamente duplicar\u00e1 las ventas del a\u00f1o pasado en el a\u00f1o fiscal 2025. Este crecimiento justifica que usemos un m\u00faltiplo EV/FCF de 40 veces, de manera excepcional/temporal.\n\nTambi\u00e9n como excepci\u00f3n, valoraremos esta compa\u00f1\u00eda a 3 a\u00f1os vista, dado que probablemente, el crecimiento se ralentizar\u00e1 m\u00e1s adelante, y es dif\u00edcil justificar un m\u00faltiplo de 40x a largo plazo.\n\nEl escenario que planteamos en la plantilla de valoraci\u00f3n nos arroja un precio objetivo de 164$ de cara al a\u00f1o fiscal 2027, que supondr\u00eda un retorno anual del 10%.\n\nExiste la \u201copcionalidad positiva\u201d de que la compa\u00f1\u00eda genere un crecimiento superior al que estimamos de 2027 en adelante, o de que genere mejor margen operativo, pero es IMPOSIBLE saber qu\u00e9 crecimiento tendr\u00e1 esos a\u00f1os a d\u00eda de hoy. Nadie puede saber con certeza si los competidores lograr\u00e1n robarle cuota de mercado a Nvidia.\n\nPor otro lado, siempre existir\u00e1 la posibilidad de que ocurra un escenario pesimista, y que Nvidia crezca menos de lo esperado, o que genere peores m\u00e1rgenes. Recuerda las grandes ca\u00eddas del precio por acci\u00f3n cuando se producen esos \u201cfrenazos\u201d de crecimiento (lo hemos visto en el apartado Crecimiento y m\u00e1rgenes).\n\nSi ves Nvidia demasiado arriesgada, puedes tener una exposici\u00f3n m\u00e1s diversificada al crecimiento de la IA a trav\u00e9s de un ETF como el \u201cVanEck Semiconductor\u201d, que cotiza con el ticker SMH [ISIN: IE00BMC38736 en Europa y US92189F6768 en EEUU]. Realmente, este ETF es de empresas de semiconductores, pero la mayor\u00eda de empresas que lo componen se benefician del crecimiento de la IA.",
+      "graphics": [
+        {
+          "type": "Figure",
+          "caption": "Nvidia's legal settlement regarding defective GPUs.",
+          "content": "Nvidia To Compensate Customers Over Defective GPUs. In the settlement on August 12, Nvidia agreed to pay $3 million for the plaintiffs' legal fees. In addition, it will deposit $2 million into a reimbursement fund and replace any faulty GPUs. The $2 million fund is available to those who have experienced one or more of the 'identified failures,' according to the settlement as quoted in CNet. Nvidia has already spent $450 million since July 2008 to cover costs associated with the repair and replacement of laptops affected by issues with Nvidia's GPUs and their packaging. Fuente: CRN"
+        }
+      ]
+    }
+  ]
+}

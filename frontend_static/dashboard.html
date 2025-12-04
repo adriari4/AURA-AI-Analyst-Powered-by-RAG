@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ValueInvest AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-track" id="tickerTrack">
+            <!-- Items injected by JS -->
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <i data-lucide="trending-up"></i>
+            ValueInvest<span>AI</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="thesis.html">Thesis</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="hero">
+            <h1>System <span style="color: var(--accent-color);">Dashboard</span></h1>
+            <p>Real-time stats of the RAG pipeline.</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="videoCount">...</div>
+                <div class="stat-label">Videos Indexed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="vectorCount">...</div>
+                <div class="stat-label">Total Vectors</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

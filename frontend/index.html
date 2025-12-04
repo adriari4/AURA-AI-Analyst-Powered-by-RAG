@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValueInvest AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <i data-lucide="trending-up"></i>
+            ValueInvest<span>AI</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="thesis.html">Thesis</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container home-layout">
+
+        <div class="hero-section">
+            <h1 class="main-title">Value Investing <span>AI</span></h1>
+            <p class="subtitle">Ask questions about "Invertir Desde Cero" videos and get instant, accurate answers.</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" id="queryInput" placeholder="Ask about Value Investing..." autocomplete="off">
+                <div class="search-actions">
+                    <button id="micBtn" class="icon-btn mic-btn">
+                        <i data-lucide="mic"></i>
+                    </button>
+                    <button id="askBtn" class="icon-btn arrow-btn">
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loader-container" id="loader">
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="result-card" id="resultCard">
+            <div class="result-header">
+                <i data-lucide="sparkles" size="16"></i>
+                AI Answer
+            </div>
+            <div class="result-content" id="answerText"></div>
+            <div class="result-footer">
+                <div class="citation" id="citationArea">
+                    Source: <span id="sourceLink"></span>
+                </div>
+                <div id="audioStatus"
+                    style="display:flex; align-items:center; gap:0.5rem; font-size:0.8rem; color:var(--accent-color);">
+                    <i data-lucide="volume-2" size="14"></i> Auto-playing
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/chat.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Thesis - ValueInvest AI</title>
+    <link rel="stylesheet" href="style.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-track" id="tickerTrack">
+            <!-- Items injected by JS -->
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <i data-lucide="trending-up"></i>
+            ValueInvest<span>AI</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="thesis_v2.html" class="active">Thesis</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container" style="max-width: 1400px;">
+
+        <div class="hero">
+            <h1>Investment <span style="color: var(--accent-color);">Thesis</span></h1>
+            <p>Deep dive into company analysis from your PDF library.</p>
+        </div>
+
+        <div class="search-box">
+            <div class="input-wrapper" style="border-radius: 12px; padding: 0.5rem;">
+                <select id="companySelect" style="
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    color: var(--text-primary);
+                    font-size: 1.1rem;
+                    padding: 1rem;
+                    outline: none;
+                    cursor: pointer;
+                ">
+                    <option value="" disabled selected>Select a Company to Analyze...</option>
+                    <option value="NVIDIA" style="background: var(--card-bg);">NVIDIA</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Fear & Greed Index Widget -->
+        <div class="result-card visible" id="fearGreedCard"
+            style="margin-bottom: 2rem; border-left: 4px solid #f59e0b; display: none; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div class="result-header" style="justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-lucide="gauge"></i>
+                    Fear & Greed Index
+                </div>
+                <div id="fearGreedValue" style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">--
+                </div>
+            </div>
+            <div class="result-content" style="display: flex; align-items: center; gap: 1rem;">
+                <div
+                    style="flex: 1; height: 12px; background: #333; border-radius: 6px; overflow: hidden; position: relative;">
+                    <div id="fearGreedBar"
+                        style="width: 0%; height: 100%; background: linear-gradient(90deg, #ef4444, #f59e0b, #10b981); transition: width 1s ease-out;">
+                    </div>
+                </div>
+                <div id="fearGreedLabel"
+                    style="font-weight: 600; color: var(--text-secondary); min-width: 100px; text-align: right;">
+                    Loading...</div>
+            </div>
+            <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-secondary); text-align: right;">
+                Source: CNN Business
+            </div>
+        </div>
+
+        <div class="loader-container" id="loader">
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div id="thesisResult" style="display: none; width: 100%; animation: slideUp 0.6s ease-out;">
+
+            <div class="thesis-grid">
+                <!-- LEFT COLUMN: Data Visualization -->
+                <div class="premium-chart-box" id="chartContainer">
+                    <div class="chart-header">
+                        <h3>Intrinsic Value Projection</h3>
+                        <span class="live-indicator">● Live Data</span>
+                    </div>
+                    <div id="premiumChart" style="width: 100%; height: 100%;"></div>
+                </div>
+
+                <!-- RIGHT COLUMN: Executive Summary -->
+                <div class="premium-summary-box" id="summaryContainer">
+                    <div class="summary-header">
+                        <h3>Executive Summary</h3>
+                    </div>
+                    <div id="thesisSummary" class="summary-content">
+                        <!-- Content injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Sections (kept in DOM but hidden as per request for strict 2-col layout) -->
+            <div style="display: none;">
+                <div id="graphicsCard"></div>
+                <div id="graphicsContent"></div>
+                <div id="revenueChart"></div>
+                <div id="profitChart"></div>
+                <div id="valuationMetrics"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="app.js"></script>
+    <script src="thesis.js?v=6"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

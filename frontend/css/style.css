@@ -1,0 +1,807 @@
+:root {
+    --bg-color: #09090b;
+    --card-bg: #18181b;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --border-color: #27272a;
+    --success-color: #10b981;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* --- Ticker --- */
+.ticker-wrap {
+    width: 100%;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.ticker-track {
+    display: flex;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+}
+
+.ticker-item {
+    padding: 0 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ticker-item span.up {
+    color: var(--success-color);
+}
+
+.ticker-item span.down {
+    color: #ef4444;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-primary);
+}
+
+/* --- Main Layout --- */
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* Changed from center to flex-start for better top alignment */
+    padding: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    /* Increased max-width for 2-col layout */
+    margin: 0 auto;
+    min-height: calc(100vh - 140px);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.main-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.main-title span {
+    color: #ffffff;
+    /* AI is white in the design, or maybe grey? Design shows "Value Investing AI" all white/grey. Wait, the logo has blue AI. The title in image is "Value Investing AI" with "AI" looking same color. Let's make it white for now. */
+    color: #a1a1aa;
+    /* Actually looks like the "AI" might be slightly different or just same. Let's stick to white or light grey. */
+}
+
+.subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    color: #a1a1aa;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* --- Search Bar (New Design) --- */
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+    animation: slideUp 0.8s ease-out 0.2s backwards;
+}
+
+.search-bar {
+    background: #0f0f11;
+    /* Very dark, slightly lighter than bg */
+    border: 1px solid #27272a;
+    border-radius: 100px;
+    padding: 8px 8px 8px 24px;
+    /* Left padding for text, right for buttons */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.search-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: #52525b;
+}
+
+.search-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: #71717a;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.icon-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.arrow-btn {
+    background: #3b82f6;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+}
+
+.arrow-btn:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* --- Result Card (Legacy/FearGreed) --- */
+.result-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(20px);
+    display: none;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.3);
+}
+
+.result-card.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+/* --- Thesis Grid Layout (New) --- */
+.thesis-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    /* Left (Chart) wider than Right (Summary) */
+    gap: 2rem;
+    width: 100%;
+    align-items: stretch;
+    /* Stretch to same height */
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@media (max-width: 1024px) {
+    .thesis-grid {
+        grid-template-columns: 1fr;
+        /* Stack on smaller screens */
+    }
+}
+
+/* --- Premium Chart Box --- */
+.premium-chart-box {
+    background: linear-gradient(145deg, #1e1e24, #131316);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.chart-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.live-indicator {
+    font-size: 0.75rem;
+    color: var(--success-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+}
+
+/* --- Premium Summary Box --- */
+.premium-summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Match height of grid cell */
+}
+
+.summary-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+.summary-header h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    background: linear-gradient(to right, #fff, #a1a1aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.summary-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #d4d4d8;
+    text-align: justify;
+    overflow-y: auto;
+    padding-right: 1rem;
+    /* Space for scrollbar */
+}
+
+/* Custom Scrollbar for Summary */
+.summary-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.summary-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.summary-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.summary-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Typography inside Summary */
+.summary-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.summary-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.summary-content li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.summary-content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* --- Loader --- */
+.loader-container {
+    display: none;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   THESIS PAGE — TWO COLUMN CORPORATE LAYOUT
+========================================== */
+
+.thesis-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* LEFT COLUMN */
+.thesis-left {
+    flex: 1;
+}
+
+.company-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 70px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: white;
+    letter-spacing: -1px;
+}
+
+/* CHART CONTAINER CARD */
+.chart-card {
+    background: #15171c;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    height: fit-content;
+    min-height: 500px;
+}
+
+/* RIGHT COLUMN */
+.thesis-right {
+    flex: 1;
+}
+
+/* EXECUTIVE SUMMARY CARD */
+.summary-card {
+    background: #15171c;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* SUMMARY TITLE */
+.summary-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 8px;
+}
+
+/* SUMMARY BODY TEXT */
+.summary-text {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    word-spacing: 2px;
+    color: #dedede;
+}
+
+/* BULLET LIST STYLE */
+.summary-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.summary-text li {
+    background: #1c1f24;
+    border-left: 4px solid #3b82f6;
+    padding: 10px 14px;
+    margin-bottom: 1.5rem;
+}
+
+.summary-content li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.summary-content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* --- Loader --- */
+.loader-container {
+    display: none;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   THESIS PAGE — TWO COLUMN CORPORATE LAYOUT
+========================================== */
+
+.thesis-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* LEFT COLUMN */
+.thesis-left {
+    flex: 1;
+}
+
+.company-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 70px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: white;
+    letter-spacing: -1px;
+}
+
+/* CHART CONTAINER CARD */
+.chart-card {
+    background: #15171c;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    height: fit-content;
+    min-height: 500px;
+}
+
+/* RIGHT COLUMN */
+.thesis-right {
+    flex: 1;
+}
+
+/* EXECUTIVE SUMMARY CARD */
+.summary-card {
+    background: #15171c;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* SUMMARY TITLE */
+.summary-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 8px;
+}
+
+/* SUMMARY BODY TEXT */
+.summary-text {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    word-spacing: 2px;
+    color: #dedede;
+}
+
+/* BULLET LIST STYLE */
+.summary-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.summary-text li {
+    background: #1c1f24;
+    border-left: 4px solid #3b82f6;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.summary-text strong {
+    color: #91c9ff;
+}
+
+/* SCROLLBAR */
+.summary-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+.summary-card::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   FULL EXECUTIVE SUMMARY UI IMPROVEMENT
+========================================== */
+
+.sum-wrapper {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #e5e5e5;
+    line-height: 1.75;
+    padding-right: 8px;
+}
+
+.sum-header {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    margin-top: 5px;
+    color: #ffffff;
+}
+
+.sum-subheader {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 22px;
+    margin-bottom: 10px;
+    color: #85b8ff;
+}
+
+.sum-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.sum-list li {
+    background: #1a1c20;
+    border-left: 4px solid #3b82f6;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    line-height: 1.55;
+}
+
+.sum-divider {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 28px 0 20px;
+}

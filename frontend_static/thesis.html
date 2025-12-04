@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVIDIA Investment Thesis</title>
+
+    <link rel="stylesheet" href="css/style.css?v=10">
+
+    <!-- Modern Corporate Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <i data-lucide="trending-up"></i>
+            ValueInvest<span>AI</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="thesis.html">Thesis</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- MAIN THESIS CONTENT -->
+    <div class="thesis-wrapper">
+
+        <!-- LEFT COLUMN -->
+        <div class="thesis-left">
+            <h1 class="company-title">NVIDIA</h1>
+
+            <div class="chart-card">
+                <canvas id="chartCanvas"></canvas>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="thesis-right">
+            <div class="summary-card">
+                <h2 class="summary-title">Executive Summary</h2>
+                <div id="summary-content" class="summary-text">Loading…</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/ticker.js"></script>
+    <script src="js/thesis.js"></script>
+    <script> lucide.createIcons(); </script>
+
+</body>
+</html>
