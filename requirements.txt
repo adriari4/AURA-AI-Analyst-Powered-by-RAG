@@ -16,3 +16,5 @@ langchainhub
 pypdf
 pymupdf
 rapidocr-onnxruntime
+pandas
+openpyxl

@@ -56,9 +56,11 @@ A multimodal RAG (Retrieval Augmented Generation) system designed to answer valu
 ├── data/
 │   ├── pdfs/                # PDF storage
 │   └── videos/              # Video storage
-├── ingest_data.py           # Data ingestion script (PDF & YouTube)
-├── requirements.txt         # Dependencies
-└── .env                     # Environment variables
+├── scripts/             # Utility scripts
+│   ├── ingest_data.py   # Data ingestion execution
+│   └── ...              # Other maintenance scripts
+├── requirements.txt     # Dependencies
+└── .env                 # Environment variables
 ```
 
 ## ⚙️ Setup & Installation
