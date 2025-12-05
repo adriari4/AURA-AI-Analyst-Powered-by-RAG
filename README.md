@@ -111,4 +111,4 @@ Check out `rag_tutorial.ipynb` for a step-by-step walkthrough of how the ReAct a
 The agent is configured with a custom system prompt to:
 1.  **Never** use outside knowledge.
 2.  **Always** cite the source as: `Source: (Pinecone)`.
-3.  **Fallback** phrase: "This information does not appear in thevideos."
+3.  **Fallback** phrase: "This information does not appear in the videos."
