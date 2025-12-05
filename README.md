@@ -99,7 +99,7 @@ To add more videos to the knowledge base:
 2. Place PDFs in `data/pdfs/`.
 3. Run the ingestion script:
    ```bash
-   python ingest_data.py
+   python scripts/ingest_data.py
    ```
 
 ## 📓 Tutorial
