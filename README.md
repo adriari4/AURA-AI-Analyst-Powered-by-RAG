@@ -63,7 +63,7 @@ A multimodal RAG (Retrieval Augmented Generation) system designed to answer valu
 └── .env                 # Environment variables
 ```
 
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 1.  **Clone the repository** (or navigate to the project folder).
 
@@ -82,7 +82,7 @@ A multimodal RAG (Retrieval Augmented Generation) system designed to answer valu
     LANGCHAIN_PROJECT=ValueInvestingChatbot
     ```
 
-## 🏃‍♂️ How to Run
+##  How to Run
 
 ### 1. Start the Application
 Run the FastAPI backend (which also serves the frontend):
@@ -104,11 +104,11 @@ To add more videos to the knowledge base:
    python scripts/ingest_data.py
    ```
 
-## 📓 Tutorial
+##  Tutorial
 Check out `rag_tutorial.ipynb` for a step-by-step walkthrough of how the ReAct agent and RAG chain are constructed.
 
-## 🔒 Strict Mode Rules
+## Strict Mode Rules
 The agent is configured with a custom system prompt to:
 1.  **Never** use outside knowledge.
-2.  **Always** cite the source as: `Source: Invertir Desde Cero (Pinecone)`.
-3.  **Fallback** phrase: "This information does not appear in the Invertir Desde Cero videos."
+2.  **Always** cite the source as: `Source: (Pinecone)`.
+3.  **Fallback** phrase: "This information does not appear in thevideos."
