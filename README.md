@@ -1,8 +1,8 @@
-# Value Investing Chatbot (Invertir Desde Cero)
+# Value Investing Chatbot
 
-A multimodal RAG (Retrieval Augmented Generation) system designed to answer value investing questions strictly based on the "Invertir Desde Cero" YouTube channel content.
+A multimodal RAG (Retrieval Augmented Generation) system designed to answer value investing questions strictly based on the YouTube channel content.
 
-## 🚀 Features
+##  Features
 
 - **Strict RAG**: Answers are grounded **exclusively** in the provided video content. The agent refuses to answer general questions or use external knowledge.
 - **Multimodal Interaction**:
@@ -13,7 +13,7 @@ A multimodal RAG (Retrieval Augmented Generation) system designed to answer valu
 - **ReAct Agent**: Powered by LangChain's ReAct architecture to intelligently route queries and handle tools.
 - **Modern UI**: A premium, dark-themed web interface with a smooth stock ticker and responsive design.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Backend**: Python, FastAPI, LangChain, OpenAI (GPT-4o), Pinecone (Vector DB).
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript (served statically by FastAPI).
