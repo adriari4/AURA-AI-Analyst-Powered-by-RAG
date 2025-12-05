@@ -26,7 +26,7 @@ A multimodal RAG (Retrieval Augmented Generation) system designed to answer valu
   - Audio Transcription: `openai/whisper`
   - Text-to-Speech: `tts-1`
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 ├── backend/
