@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ValueInvest AI</title>
+    <title>AURA</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
@@ -12,15 +12,21 @@
 
 <body>
 
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+
     <!-- Navigation -->
     <nav>
         <div class="logo">
             <i data-lucide="trending-up"></i>
-            ValueInvest<span>AI</span>
+            AURA
         </div>
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="thesis.html">Thesis</a>
+            <a href="excel.html">Stock Valuation</a>
             <a href="dashboard.html">Dashboard</a>
         </div>
     </nav>
@@ -29,13 +35,13 @@
     <div class="main-container home-layout">
 
         <div class="hero-section">
-            <h1 class="main-title">Value Investing <span>AI</span></h1>
-            <p class="subtitle">Ask questions about "Invertir Desde Cero" videos and get instant, accurate answers.</p>
+            <h1 class="main-title">AURA</h1>
+            <p class="subtitle">Ask questions about Value Investing and get instant, accurate answers.</p>
         </div>
 
         <div class="search-container">
             <div class="search-bar">
-                <input type="text" id="queryInput" placeholder="Ask about Value Investing..." autocomplete="off">
+                <input type="text" id="queryInput" placeholder="Ask about Value Investing…" autocomplete="off">
                 <div class="search-actions">
                     <button id="micBtn" class="icon-btn mic-btn">
                         <i data-lucide="mic"></i>
@@ -76,6 +82,7 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="js/chat.js"></script>
+    <script src="js/ticker.js?v=2"></script>
     <script>
         lucide.createIcons();
     </script>

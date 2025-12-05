@@ -1,3 +1,7 @@
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -12,21 +16,22 @@ from openai import OpenAI
 from pinecone import Pinecone
 
 # Import internal modules
-# Import internal modules
 from .rag_chain import answer_question
-from .speech_to_text import transcribe_audio
-from .thesis_logic import get_thesis_data
-from ingest_videos import INDEX_NAME
+from backend.speech_to_text import transcribe_audio
 
 # Import Routers
 from .routers import nvidia_thesis_summary
 from .routers import nvidia_chart
+from .routers import excel_router
+from .routers import company_routes
 
 app = FastAPI(title="Value Investing AI API")
 
 # Include Routers
 app.include_router(nvidia_thesis_summary.router)
 app.include_router(nvidia_chart.router)
+app.include_router(excel_router.router)
+app.include_router(company_routes.router)
 
 # Allow CORS
 app.add_middleware(
@@ -44,6 +49,7 @@ class TextQuery(BaseModel):
 app.mount("/static", StaticFiles(directory="frontend_static"), name="static") # Keep for backup/reference if needed
 app.mount("/css", StaticFiles(directory="frontend/css"), name="css")
 app.mount("/js", StaticFiles(directory="frontend/js"), name="js")
+app.mount("/data", StaticFiles(directory="data"), name="data")
 
 # --- Frontend Routes ---
 @app.get("/")
@@ -61,6 +67,10 @@ def read_dashboard():
 @app.get("/thesis.html")
 def read_thesis():
     return FileResponse("frontend/thesis.html")
+
+@app.get("/excel.html")
+def read_excel():
+    return FileResponse("frontend/excel.html")
 
 # --- Helper Functions ---
 client = OpenAI()
@@ -90,12 +100,19 @@ def ask_text(query: TextQuery):
         audio_b64 = generate_audio(answer)
         return {"answer": answer, "audio_base64": audio_b64}
     except Exception as e:
+        print(f"Error in ask_text: {str(e)}")
         return {"error": str(e)}
 
 @app.post("/ask-audio")
 def ask_audio(file: UploadFile = File(...)):
     try:
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
+        # Determine suffix based on filename or default to .webm
+        filename = file.filename or "recording.webm"
+        suffix = os.path.splitext(filename)[1]
+        if not suffix:
+            suffix = ".webm"
+
+        with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
             shutil.copyfileobj(file.file, tmp)
             tmp_path = tmp.name
         
@@ -110,6 +127,7 @@ def ask_audio(file: UploadFile = File(...)):
         return {"transcription": text, "answer": answer, "audio_base64": audio_b64}
         
     except Exception as e:
+        print(f"Error in ask_audio: {str(e)}")
         return {"error": str(e)}
 
 class ThesisQuery(BaseModel):

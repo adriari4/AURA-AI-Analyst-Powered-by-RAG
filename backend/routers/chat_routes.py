@@ -38,12 +38,19 @@ def ask_text(query: TextQuery):
         audio_b64 = generate_audio(answer)
         return {"answer": answer, "audio_base64": audio_b64}
     except Exception as e:
+        print(f"Error in ask_text: {str(e)}")
         return {"error": str(e)}
 
 @router.post("/ask-audio")
 def ask_audio(file: UploadFile = File(...)):
     try:
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
+        # Determine suffix based on filename or default to .webm (common for web audio)
+        filename = file.filename or "recording.webm"
+        suffix = os.path.splitext(filename)[1]
+        if not suffix:
+            suffix = ".webm"
+
+        with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
             shutil.copyfileobj(file.file, tmp)
             tmp_path = tmp.name
         
@@ -58,4 +65,5 @@ def ask_audio(file: UploadFile = File(...)):
         return {"transcription": text, "answer": answer, "audio_base64": audio_b64}
         
     except Exception as e:
+        print(f"Error in ask_audio: {str(e)}")
         return {"error": str(e)}

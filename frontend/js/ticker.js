@@ -1,17 +1,31 @@
-const API_URL = "http://localhost:8000";
+const API_URL = ""; // Use relative path
 
 // --- Ticker Logic ---
 async function initTicker() {
+    console.log("Ticker: Initializing...");
     const track = document.getElementById('tickerTrack');
-    if (!track) return;
+    if (!track) {
+        console.error("Ticker: Track element not found");
+        return;
+    }
 
     async function updateTicker() {
         try {
+            console.log("Ticker: Fetching data...");
+            // Use relative path /ticker
             const response = await fetch(`${API_URL}/ticker`);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
             const tickerData = await response.json();
+            console.log("Ticker: Data received", tickerData);
 
             if (tickerData.error) {
-                console.error("Ticker error:", tickerData.error);
+                console.error("Ticker: API error:", tickerData.error);
+                return;
+            }
+
+            if (!tickerData || tickerData.length === 0) {
+                console.warn("Ticker: No data received");
                 return;
             }
 
@@ -28,19 +42,25 @@ async function initTicker() {
 
             // Duplicate content enough times to fill screen + buffer for smooth loop
             // We create 4 sets of data to ensure the track is long enough
-            track.innerHTML = createItems() + createItems() + createItems() + createItems();
+            const itemsHtml = createItems();
+            track.innerHTML = itemsHtml + itemsHtml + itemsHtml + itemsHtml;
+            console.log("Ticker: Updated DOM");
 
         } catch (error) {
-            console.error("Failed to fetch ticker data:", error);
+            console.error("Ticker: Failed to fetch data:", error);
         }
     }
 
     // Initial load
     await updateTicker();
 
-    // Refresh every 10 seconds
-    setInterval(updateTicker, 10000);
+    // Refresh every 60 seconds
+    setInterval(updateTicker, 60000);
 }
 
 // Initialize
-initTicker();
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTicker);
+} else {
+    initTicker();
+}

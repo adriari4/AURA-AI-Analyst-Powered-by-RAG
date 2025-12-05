@@ -1,41 +1,105 @@
 window.onload = () => {
-    loadNvidiaChart();
-    loadNvidiaSummary();
+    loadCompanies();
+    // Default load
+    loadThesis("NVIDIA");
 };
 
+const API_BASE = "http://localhost:8000";
+let chartInstance = null;
+
 /* ----------------------------------------
-   LOAD SUMMARY FROM BACKEND
+   LOAD COMPANIES LIST
 ---------------------------------------- */
-async function loadNvidiaSummary() {
+/* ----------------------------------------
+   LOAD COMPANIES LIST
+---------------------------------------- */
+async function loadCompanies() {
+    const listContainer = document.getElementById("companyList");
+    try {
+        const res = await fetch(`${API_BASE}/companies`);
+        const data = await res.json();
+
+        listContainer.innerHTML = "";
+
+        data.companies.forEach(company => {
+            const btn = document.createElement("button");
+            btn.className = "company-btn";
+            btn.textContent = company;
+
+            // Set initial active state
+            if (company === "NVIDIA" || company === "NVIDIA_Thesis_INVESTMENT") {
+                btn.classList.add("active");
+            }
+
+            btn.addEventListener("click", () => {
+                // Update Title
+                document.getElementById("companyTitle").textContent = company;
+
+                // Update Active State
+                document.querySelectorAll(".company-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                // Load Data
+                loadThesis(company);
+            });
+
+            listContainer.appendChild(btn);
+        });
+
+    } catch (err) {
+        console.error("Failed to load companies:", err);
+    }
+}
+
+/* ----------------------------------------
+   LOAD THESIS (Summary + Chart)
+---------------------------------------- */
+async function loadThesis(companyName) {
+    loadSummary(companyName);
+    loadChart(companyName);
+}
+
+/* ----------------------------------------
+   LOAD SUMMARY
+---------------------------------------- */
+async function loadSummary(companyName) {
     const box = document.getElementById("summary-content");
-    box.textContent = "Loading summary…";
+    box.innerHTML = "<div style='padding:20px; text-align:center; color:#666;'>Loading analysis for " + companyName + "...</div>";
 
     try {
-        const res = await fetch("http://localhost:8000/thesis/nvidia/summary");
+        // Use the new generic endpoint
+        const res = await fetch(`${API_BASE}/companies/${companyName}/summary`);
+        if (!res.ok) throw new Error("Failed to fetch summary");
+
         const data = await res.json();
-        box.innerHTML = data.executive_summary;
+        box.innerHTML = data.summary;
     } catch (err) {
-        box.textContent = "Failed to load summary.";
+        box.textContent = "Failed to load summary. Please ensure the PDF exists in data/pdfs.";
         console.error(err);
     }
 }
 
 /* ----------------------------------------
-   LOAD CHART FROM BACKEND
+   LOAD CHART
 ---------------------------------------- */
-async function loadNvidiaChart() {
+async function loadChart(companyName) {
     try {
-        const res = await fetch("http://localhost:8000/thesis/nvidia/chart");
+        const res = await fetch(`${API_BASE}/companies/${companyName}/chart`);
         const data = await res.json();
 
         const ctx = document.getElementById("chartCanvas").getContext("2d");
+
+        // Destroy previous chart if exists
+        if (chartInstance) {
+            chartInstance.destroy();
+        }
 
         // Create Gradient
         const gradient = ctx.createLinearGradient(0, 0, 0, 400);
         gradient.addColorStop(0, "rgba(78, 168, 255, 0.5)"); // Top: Blue
         gradient.addColorStop(1, "rgba(78, 168, 255, 0.0)"); // Bottom: Transparent
 
-        new Chart(ctx, {
+        chartInstance = new Chart(ctx, {
             type: "line",
             data: {
                 labels: data.years,
@@ -44,11 +108,11 @@ async function loadNvidiaChart() {
                         label: "Intrinsic Value (EV/FCF)",
                         data: data.intrinsic_values,
                         borderColor: "#4ea8ff",
-                        backgroundColor: gradient, // Use Gradient
+                        backgroundColor: gradient,
                         borderWidth: 3,
-                        tension: 0.4, // Smoother curve
+                        tension: 0.4,
                         fill: true,
-                        pointBackgroundColor: "#18181b", // Dark background for point center
+                        pointBackgroundColor: "#18181b",
                         pointBorderColor: "#4ea8ff",
                         pointBorderWidth: 2,
                         pointRadius: 6,
@@ -63,7 +127,7 @@ async function loadNvidiaChart() {
                         borderDash: [6, 6],
                         borderWidth: 2,
                         tension: 0.4,
-                        pointRadius: 0, // Hide points for the benchmark line
+                        pointRadius: 0,
                         pointHoverRadius: 0
                     }
                 ]
@@ -128,9 +192,7 @@ async function loadNvidiaChart() {
                         }
                     },
                     y: {
-                        beginAtZero: false, // Let it scale to data
-                        suggestedMin: 100,
-                        suggestedMax: 450,
+                        beginAtZero: false,
                         grid: {
                             color: "rgba(255,255,255,0.05)",
                             drawBorder: false

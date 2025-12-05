@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - ValueInvest AI</title>
+    <title>Dashboard - AURA</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -22,11 +22,12 @@
     <nav>
         <div class="logo">
             <i data-lucide="trending-up"></i>
-            ValueInvest<span>AI</span>
+            AURA
         </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="thesis.html">Thesis</a>
+            <a href="excel.html">Stock Valuation</a>
             <a href="dashboard.html" class="active">Dashboard</a>
         </div>
     </nav>
@@ -46,6 +47,80 @@
             <div class="stat-card">
                 <div class="stat-value" id="vectorCount">...</div>
                 <div class="stat-label">Total Vectors</div>
+            </div>
+        </div>
+
+        <!-- Pipeline Visualization -->
+        <div class="pipeline-section">
+            <h2 class="pipeline-title">RAG Pipeline Architecture</h2>
+            <div class="pipeline-container">
+                <!-- Step 1: Ingestion -->
+                <div class="pipeline-step">
+                    <div class="step-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+                    <span class="step-label">Ingestion</span>
+                </div>
+
+                <div class="step-arrow">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+
+                <!-- Step 2: Processing -->
+                <div class="pipeline-step">
+                    <div class="step-icon">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <span class="step-label">Processing</span>
+                </div>
+
+                <div class="step-arrow">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+
+                <!-- Step 3: Vector DB -->
+                <div class="pipeline-step">
+                    <div class="step-icon">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <span class="step-label">Vector DB</span>
+                </div>
+
+                <div class="step-arrow">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+
+                <!-- Step 4: Retrieval -->
+                <div class="pipeline-step">
+                    <div class="step-icon">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <span class="step-label">Retrieval</span>
+                </div>
+
+                <div class="step-arrow">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+
+                <!-- Step 5: LLM -->
+                <div class="pipeline-step">
+                    <div class="step-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <span class="step-label">LLM Generation</span>
+                </div>
+
+                <div class="step-arrow">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+
+                <!-- Step 6: Answer -->
+                <div class="pipeline-step">
+                    <div class="step-icon">
+                        <i data-lucide="message-square"></i>
+                    </div>
+                    <span class="step-label">Final Answer</span>
+                </div>
             </div>
         </div>
     </div>

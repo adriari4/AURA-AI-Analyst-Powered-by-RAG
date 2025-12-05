@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Stock Valuation – NVIDIA</title>
+
+    <!-- SpreadJS CSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/@grapecity/spread-sheets/styles/gc.spread.sheets.excel2013white.css" />
+
+    <!-- SpreadJS JS -->
+    <script src="https://unpkg.com/@grapecity/spread-sheets/dist/gc.spread.sheets.all.min.js"></script>
+    <script src="https://unpkg.com/@grapecity/spread-excelio/dist/gc.spread.excelio.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background: #0f0f0f;
+            margin: 0;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #spreadContainer {
+            width: 100%;
+            height: 60vh;
+            margin-top: 20px;
+            border: 1px solid #333;
+        }
+
+        .controls {
+            margin: 20px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 8px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .controls input {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #333;
+            background: #2a2a2a;
+            color: white;
+            font-size: 16px;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            border-radius: 4px;
+            border: none;
+            background: #3b82f6;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .controls button:hover {
+            background: #2563eb;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #ccc;
+        }
+
+        /* Ticker CSS */
+        .ticker-wrap {
+            width: 100%;
+            background-color: #18181b;
+            border-bottom: 1px solid #27272a;
+            overflow: hidden;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker-track {
+            display: flex;
+            animation: ticker 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker-item {
+            padding: 0 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #a1a1aa;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ticker-item span.up {
+            color: #10b981;
+        }
+
+        .ticker-item span.down {
+            color: #ef4444;
+        }
+
+        @keyframes ticker {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <i data-lucide="trending-up"></i>
+            AURA
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="thesis.html">Thesis</a>
+            <a href="excel.html" class="active">Stock Valuation</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <h1 style="margin-left:20px;">📊 Stock Valuation – NVIDIA</h1>
+
+    <div class="controls">
+        <span class="label">Current Share Price:</span>
+        <input type="number" id="priceInput" placeholder="Enter value (e.g., 135)" step="0.01">
+        <button onclick="updatePrice()">Update & Calculate</button>
+    </div>
+
+    <div id="spreadContainer">Loading Excel Viewer...</div>
+    <div style="text-align: center; padding: 20px; color: #666; font-size: 0.9em;">
+        Valuation results are educational only. AURA does not provide financial advice.
+    </div>
+
+    <script>
+        // Global error handler
+        window.onerror = function (message, source, lineno, colno, errorObj) {
+            console.error("Global Error:", message, "at", source, ":", lineno);
+        };
+
+        let spreadInstance = null;
+
+        function updatePrice() {
+            const input = document.getElementById("priceInput");
+            const value = parseFloat(input.value);
+
+            if (isNaN(value)) {
+                alert("Please enter a valid number.");
+                return;
+            }
+
+            if (!spreadInstance) {
+                alert("Spreadsheet not initialized yet.");
+                return;
+            }
+
+            const sheet = spreadInstance.getActiveSheet();
+            // B19 is Row 18, Col 1
+            sheet.setValue(18, 1, value);
+
+            // Trigger calculation explicitly
+            spreadInstance.calculate(); // Recalculate all
+
+            // Highlight the change
+            const cell = sheet.getCell(18, 1);
+            cell.backColor("#00FF00"); // Flash green
+            setTimeout(() => {
+                cell.backColor("#FFFF00"); // Return to yellow
+            }, 500);
+        }
+    </script>
+
+    <script>
+        if (typeof GC === 'undefined') {
+            console.error("GC is undefined! SpreadJS scripts failed to load.");
+            document.getElementById("spreadContainer").innerHTML = "<div style='padding:20px; color:red'>Error: SpreadJS libraries failed to load. Please check your internet connection.</div>";
+            throw new Error("GC undefined");
+        }
+
+        try {
+            document.getElementById("spreadContainer").innerHTML = "";
+
+            const spread = new GC.Spread.Sheets.Workbook(document.getElementById("spreadContainer"), {
+                sheetCount: 1
+            });
+            spreadInstance = spread; // Store global reference
+
+            spread.options.calcOnDemand = false;
+            spread.options.allowUserDragFill = true;
+            spread.options.allowUserDragDrop = true;
+            spread.options.scrollbarMaxAlign = true;
+            spread.options.tabStripVisible = true;
+
+            const excelIO = new GC.Spread.Excel.IO();
+
+            fetch("/data/excel/Nvidia.xlsx")
+                .then(r => {
+                    if (!r.ok) throw new Error(`HTTP error! status: ${r.status}`);
+                    return r.blob();
+                })
+                .then(blob => {
+                    excelIO.open(blob, file => {
+                        spread.suspendPaint();
+                        spread.fromJSON(file);
+
+                        const targetSheetName = "4.Valoracion";
+                        let sheetIndex = spread.getSheetIndex(targetSheetName);
+
+                        if (sheetIndex === -1) sheetIndex = 4;
+
+                        if (sheetIndex < spread.getSheetCount()) {
+                            const sheet = spread.getSheet(sheetIndex);
+                            spread.setActiveSheetIndex(sheetIndex);
+                            sheet.visible(true);
+                            sheet.options.isProtected = true;
+
+                            // Unlock cell B19
+                            const cell = sheet.getCell(18, 1);
+                            cell.locked(false);
+                            cell.backColor("#FFFF00");
+                            cell.foreColor("#000000");
+
+                            // Set initial value to input if available
+                            const currentVal = cell.value();
+                            if (currentVal) {
+                                document.getElementById("priceInput").value = currentVal;
+                            }
+
+                            sheet.showCell(18, 1, GC.Spread.Sheets.VerticalPosition.center, GC.Spread.Sheets.HorizontalPosition.center);
+
+                            sheet.bind(GC.Spread.Sheets.Events.EditEnded, function (e, args) {
+                                spread.calculate();
+                            });
+
+                            spread.resumePaint();
+                            spread.repaint();
+                        } else {
+                            spread.resumePaint();
+                            console.error("Target sheet index out of bounds!");
+                            alert("Error: Sheet '4.Valoracion' not found.");
+                        }
+
+                    }, err => {
+                        console.error("SpreadJS ExcelIO Error: " + JSON.stringify(err));
+                        alert("Error parsing Excel file. Please try refreshing.");
+                    });
+                })
+                .catch(e => {
+                    console.error("Fetch/Load Error: " + e.message);
+                    document.getElementById("spreadContainer").innerHTML = "<div style='padding:20px; color:red'>Failed to load Excel file.</div>";
+                });
+        } catch (e) {
+            console.error("Runtime Error: " + e.message);
+        }
+    </script>
+
+    <script src="js/ticker.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

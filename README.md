@@ -1,4 +1,4 @@
-# Value Investing Chatbot (Invertir Desde Cero)
+# AURA - Value Investing AI Analyst
 
 A multimodal RAG (Retrieval Augmented Generation) system designed to answer value investing questions strictly based on the "Invertir Desde Cero" YouTube channel content.
 
@@ -8,15 +8,18 @@ A multimodal RAG (Retrieval Augmented Generation) system designed to answer valu
 - **Multimodal Interaction**:
   - **Voice Input**: Record questions using the microphone button (Whisper integration).
   - **Voice Output**: Answers are automatically spoken aloud (OpenAI TTS).
+- **Stock Valuation**: Integrated Excel-like valuation models (SpreadJS) for companies like NVIDIA, allowing real-time price updates and recalculations.
+- **RAG Dashboard**: Visualizes the complete RAG pipeline (Ingestion -> Processing -> Vector DB -> Retrieval -> LLM -> Answer) and system statistics.
 - **ReAct Agent**: Powered by LangChain's ReAct architecture to intelligently route queries and handle tools.
 - **Modern UI**: A premium, dark-themed web interface with a smooth stock ticker and responsive design.
-- **Dashboard**: View system statistics like total vectors and ingested videos.
 
 ## 🛠️ Tech Stack
 
 - **Backend**: Python, FastAPI, LangChain, OpenAI (GPT-4o), Pinecone (Vector DB).
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript (served statically by FastAPI).
-- **OCR**: `RapidOCR` (ONNX) for PDF text extraction (Fallback). *HunyuanOCR supported for advanced extraction.*
+- **Spreadsheets**: GrapeCity SpreadJS for high-fidelity Excel rendering.
+- **Icons**: Lucide Icons.
+- **OCR**: `RapidOCR` (ONNX) for PDF text extraction.
 - **AI Models**:
   - LLM: `gpt-4o`
   - Embeddings: `text-embedding-3-small`
@@ -44,10 +47,12 @@ A multimodal RAG (Retrieval Augmented Generation) system designed to answer valu
 │   ├── js/
 │   │   ├── chat.js
 │   │   ├── thesis.js
-│   │   └── ticker.js
+│   │   ├── ticker.js
+│   │   └── excel.js
 │   ├── index.html
 │   ├── thesis.html
-│   └── dashboard.html
+│   ├── dashboard.html
+│   └── excel.html
 ├── data/
 │   ├── pdfs/                # PDF storage
 │   └── videos/              # Video storage

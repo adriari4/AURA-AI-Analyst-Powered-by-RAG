@@ -11,16 +11,16 @@ def main():
     print("--- Starting System ---")
     
     # 1. Run Ingestion (Background)
-    import threading
-    def run_ingestion():
-        print("--- Running Automatic Ingestion (Background) ---")
-        try:
-            ingest_all_data()
-        except Exception as e:
-            print(f"Ingestion failed: {e}")
+    # import threading
+    # def run_ingestion():
+    #     print("--- Running Automatic Ingestion (Background) ---")
+    #     try:
+    #         ingest_all_data()
+    #     except Exception as e:
+    #         print(f"Ingestion failed: {e}")
 
-    ingestion_thread = threading.Thread(target=run_ingestion)
-    ingestion_thread.start()
+    # ingestion_thread = threading.Thread(target=run_ingestion, daemon=True)
+    # ingestion_thread.start()
     
     # 2. Start Web UI
     print("--- Starting Web UI (FastAPI) ---")

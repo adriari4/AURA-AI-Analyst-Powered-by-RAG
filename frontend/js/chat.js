@@ -108,8 +108,13 @@ async function startRecording() {
         };
 
         mediaRecorder.onstop = async () => {
-            const audioBlob = new Blob(audioChunks, { type: 'audio/mp3' });
+            // Browsers (Chrome/Firefox) record in WebM/Ogg by default.
+            // Using 'audio/mp3' here was incorrect and caused corrupt files.
+            const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
             await sendAudio(audioBlob);
+
+            // Stop all tracks to release microphone
+            stream.getTracks().forEach(track => track.stop());
         };
 
         mediaRecorder.start();
@@ -121,7 +126,7 @@ async function startRecording() {
 }
 
 function stopRecording() {
-    if (mediaRecorder) {
+    if (mediaRecorder && mediaRecorder.state !== "inactive") {
         mediaRecorder.stop();
         micBtn.classList.remove('recording');
     }
@@ -130,7 +135,8 @@ function stopRecording() {
 async function sendAudio(blob) {
     showLoading(true);
     const formData = new FormData();
-    formData.append("file", blob, "recording.mp3");
+    // Send as .webm
+    formData.append("file", blob, "recording.webm");
 
     try {
         const response = await fetch(`${API_URL}/ask-audio`, {
